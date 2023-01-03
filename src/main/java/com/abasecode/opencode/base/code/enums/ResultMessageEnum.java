@@ -8,8 +8,8 @@ package com.abasecode.opencode.base.code.enums;
  * url: <a href="https://abasecode.com">AbaseCode.com</a>
  */
 public enum ResultMessageEnum {
-    SYSTEM_ERROR("System error!"),
-    SYSTEM_SUCCESS("Everything are well done!"),
+    SYSTEM_ERROR("system error!"),
+    SYSTEM_SUCCESS("well done!"),
     SYSTEM_OK("OK!");
     String value;
 

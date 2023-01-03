@@ -6,7 +6,7 @@
 
     <groupId>com.abasecode.opencode</groupId>
     <artifactId>abasecode-base-code</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.5</version>
     <packaging>jar</packaging>
 
     <name> ${project.artifactId} </name>
@@ -35,6 +35,10 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <maven.test.skip>true</maven.test.skip>
+        <spring-boot.version>2.6.3</spring-boot.version>
+        <lombok.version>1.18.24</lombok.version>
+        <httpmime.version>4.5.14</httpmime.version>
+        <lang3.version>3.12.0</lang3.version>
     </properties>
 
     <developers>
@@ -56,24 +60,24 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
+            <version>${lombok.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <scope>provided</scope>
-            <version>2.6.3</version>
+            <version>${spring-boot.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpmime</artifactId>
-            <version>4.5.13</version>
+            <version>${httpmime.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.12.0</version>
+            <version>${lang3.version}</version>
         </dependency>
     </dependencies>
 
@@ -88,7 +92,7 @@
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.8</version>
+                        <version>1.6.13</version>
                         <extensions>true</extensions>
                         <executions>
                             <execution>
@@ -100,6 +104,13 @@
                             <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.thoughtworks.xstream</groupId>
+                                <artifactId>xstream</artifactId>
+                                <version>1.4.19</version>
+                            </dependency>
+                        </dependencies>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
