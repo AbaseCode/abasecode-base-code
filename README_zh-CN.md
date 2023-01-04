@@ -23,7 +23,7 @@ abasecode-base-code 标准结果及异常处理包。
 <dependency>
     <groupId>com.abasecode.opencode</groupId>
     <artifactId>abasecode-base-code</artifactId>
-    <version>1.0.3</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 ## Step 2: 添加注解

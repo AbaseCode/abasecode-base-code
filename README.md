@@ -22,7 +22,7 @@ abasecode-base-code is A standard result and exception information.
 <dependency>
     <groupId>com.abasecode.opencode</groupId>
     <artifactId>abasecode-base-code</artifactId>
-    <version>1.0.3</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 ## Step 2 ：To turn on global error configuration, use the following annotation.
